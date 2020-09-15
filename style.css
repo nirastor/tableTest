@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section__about,
+.main-table__load-buttons,
+.section__main-table,
+.about-person,
+.main-table__controls,
+.main-table__loader {
+    margin: 20px;
+}
+
+.main-table__loader {
+    margin-left: 200px;
+    display: none;
+}
+
+.loader__picture {
+    display: block;
+}
+
+.loader-active {
+    display: block;
+}
+
+.main-table__row--header {
+    background-color: #666;
+    color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+.main-table__row {
+    display: flex;
+    cursor: pointer;
+}
+
+.main-table__row:hover {
+    background-color: #aaa; 
+}
+
+.main-table__element {
+    width: 150px;
+}
+
+div[data-datatype="id"] { width: 70px; }
+div[data-datatype="firstName"] { width: 120px; }
+div[data-datatype="lastName"] { width: 120px; }
+div[data-datatype="email"] { width: 240px; }
+div[data-datatype="phone"] { width: 120px; }
+
+.about-person__full-name,
+.about-person__addres {
+    font-weight: bold;
+}
+
+.about-person {
+    display: none;
+}
+
+.about-person-show {
+    display: block;
+}
+
+.main-table__paginator,
+.main-table__filter {
+    display: flex;
+    margin-right: 60px;
+}
+
+.main-table__controls {
+    display: none
+}
+
+.table-controls-show {
+    display: flex;
+}
+
+.paginator__page {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about-person__description {
+    width: 400px;
+}
+
+.reset-hidden,
+.error-hidden {
+    display: none;
+}
+
+.filter__error-message {
+    color: red;
+}
+
+.modal__add {
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.modal-open {
+    display: block;
+}

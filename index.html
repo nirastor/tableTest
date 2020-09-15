@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test for future</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section__about">
+        <h1 class="about__header">Тестовое задание для future-group</h1>
+        <p class="about__description"><a href="https://github.com/fugr-ru/frontend-javascript-test">Описание</a> тестового задания</p>
+    </div>
+
+    <div class="main-table__load-buttons">
+        <h2 class="load-buttons__header">Выберите набор данных</h2>
+        <button class="load-button" type="button" id="load-button-small">Малый</button>
+        <button class="load-button" type="button" id="load-button-big">Большой</button>
+        <button class="load-button" type="button" id="load-button-test">Тестовый</button>
+    </div>
+
+    <div class="section__main-table">
+        <div class="main-table__row--header">
+            <div class="main-table__element" data-datatype="id">id</div>
+            <div class="main-table__element" data-datatype="firstName">firstName</div>
+            <div class="main-table__element" data-datatype="lastName">lastName</div>
+            <div class="main-table__element" data-datatype="email">email</div>
+            <div class="main-table__element" data-datatype="phone">phone</div>
+        </div>
+
+        <template id="main-table__row-template">
+            <div class="main-table__row">
+                <div class="main-table__element" data-datatype="id"></div>
+                <div class="main-table__element" data-datatype="firstName"></div>
+                <div class="main-table__element" data-datatype="lastName"></div>
+                <div class="main-table__element" data-datatype="email"></div>
+                <div class="main-table__element" data-datatype="phone"></div>
+            </div>
+        </template>
+
+    </div>
+
+    <div class="main-table__loader">
+        <img class="loader__picture" src="img/ajax-loader.gif" alt="loader">
+    </div>
+
+    <div class="main-table__controls">
+        <div class="main-table__paginator">
+            <button class="paginator__button" type="button" id="paginator-button-left">&lt;</button>
+            <p class="paginator__page">
+                Стр <span class="paginator__page--current">1</span> из <span class="paginator__page--total">11</span>
+            </p>
+            <button class="paginator__button" type="button" id="paginator-button-right">&gt;</button>
+        </div>
+    
+        <div class="main-table__filter">
+            <input class="filter__input--text">
+            <select class="filter__input--column">
+                <option value="id" selected>ID</option>
+                <option value="firstName">First Name</option>
+                <option value="lastName">Last Name</option>
+                <option value="email">email</option>
+                <option value="phone">phone</option>
+                <option value="description">description</option>
+                <option value="address-streetAddress">Addres: Street</option>
+                <option value="address-city">Addres: City</option>
+                <option value="address-state">Addres: State</option>
+                <option value="address-zip">Addres: Zip</option>
+            </select>
+            <button class="filter__button--search" type="button">Фильтровать</button>
+            <button class="filter__button--reset reset-hidden" type="button">Сбросить</button>
+            <p class="filter__error-message error-hidden">Текст ошибки</p>
+        </div>
+
+        <button class="main-table__button-add" type="button">Добавить</button>
+    </div>
+
+    <div class="modal__add">
+        <div class="modal-add__inputs">
+            <div>
+                <input data-datatype="id">
+                <label>ID</label>
+            </div>
+            <div>
+                <input data-datatype="firstName">
+                <label>First Name</label>
+            </div>
+            <div>
+                <input data-datatype="lastName">
+                <label>Last Name</label>
+            </div>
+            <div>
+                <input data-datatype="email">   
+                <label>Email</label>
+            </div>
+            <div>
+                <input data-datatype="phone">
+                <label>Phone</label>
+            </div>
+        </div>
+        <button class="modal-add__button-add" disabled>Добавить</button>
+        <button class="modal-add__button-close">Закрыть</button>
+
+    </div>
+    
+
+
+    <div class="about-person">
+        <p class="about-person__paragraph">Выбран пользователь <span class="about-person__full-name">Sue Corson</span></p>
+        <p class="about-person__paragraph">Описание:</p>
+        <textarea class="about-person__description" rows="5">
+            Текст описания
+        </textarea>
+        <p class="about-person__paragraph">
+            Адрес проживания: 
+            <span class="about-person__addres" data-addres="streetAddress">9792 Mattis Ct</span>
+        </p>
+        <p class="about-person__paragraph">
+            Город:
+            <span class="about-person__addres" data-addres="city">9792 Mattis Ct</span>
+        </p>
+        <p class="about-person__paragraph">
+            Провинция/штат: 
+            <span class="about-person__addres" data-addres="state">WI</span>
+        </p>
+        <p class="about-person__paragraph">
+            Индекс: 
+            <span class="about-person__addres" data-addres="zip">9123456</span>
+        </p> 
+    </div>
+        
+    <script src="script.js"></script>
+    <script src="js/modaladd.js"></script>
+    <script src="js/testdata.js"></script>
+    <script src="js/loadbuttons.js"></script>
+    <script src="js/table.js"></script>
+</body>
+</html>
